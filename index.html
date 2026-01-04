@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalPath - Clinical Decision Support</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <!-- Placeholder for custom icon - replace with your icon -->
+                <img src="assets/icons/vital.svg" alt="VitalPath Logo" class="logo-icon" id="customLogoIcon">
+                <h1>VitalPath</h1>
+            </div>
+            <p class="tagline">Clinical Decision Support System</p>
+        </header>
+
+        <div class="disclaimer">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="9" stroke="#FF9800" stroke-width="2"/>
+                <path d="M10 6V11M10 14V14.5" stroke="#FF9800" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span><strong>Disclaimer:</strong> VitalPath is a clinical decision support tool and does not replace professional medical judgment.</span>
+        </div>
+
+        <div class="form-card">
+            <h2>Patient Data Input</h2>
+            
+            <form id="patientForm">
+                <!-- Demographics -->
+                <div class="form-section">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="section-icon">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" stroke="#2196F3" stroke-width="2"/>
+                            <path d="M4 20C4 16.69 7.58 14 12 14C16.42 14 20 16.69 20 20" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Demographics
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="age">Age (years) <span class="required">*</span></label>
+                            <input type="number" id="age" name="age" min="18" max="120" required placeholder="e.g., 45">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender <span class="required">*</span></label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmi">BMI (kg/m²) <span class="required">*</span></label>
+                            <input type="number" id="bmi" name="bmi" step="0.1" min="10" max="60" required placeholder="e.g., 24.5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vital Signs -->
+                <div class="form-section">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="section-icon">
+                            <path d="M3 12H7L10 5L14 19L17 12H21" stroke="#2196F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Vital Signs
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="systolic">Systolic BP (mmHg) <span class="required">*</span></label>
+                            <input type="number" id="systolic" name="systolic" min="70" max="250" required placeholder="e.g., 120">
+                        </div>
+                        <div class="form-group">
+                            <label for="diastolic">Diastolic BP (mmHg) <span class="required">*</span></label>
+                            <input type="number" id="diastolic" name="diastolic" min="40" max="150" required placeholder="e.g., 80">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laboratory Values -->
+                <div class="form-section">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="section-icon">
+                            <path d="M9 3V15A3 3 0 0012 18A3 3 0 0015 15V3" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 3H16" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Laboratory Values
+                    </h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="glucose">Fasting Glucose (mg/dL) <span class="required">*</span></label>
+                            <input type="number" id="glucose" name="glucose" min="50" max="400" required placeholder="e.g., 95">
+                        </div>
+                        <div class="form-group">
+                            <label for="totalCholesterol">Total Cholesterol (mg/dL) <span class="required">*</span></label>
+                            <input type="number" id="totalCholesterol" name="totalCholesterol" min="100" max="400" required placeholder="e.g., 200">
+                        </div>
+                        <div class="form-group">
+                            <label for="ldl">LDL Cholesterol (mg/dL) <span class="required">*</span></label>
+                            <input type="number" id="ldl" name="ldl" min="50" max="300" required placeholder="e.g., 130">
+                        </div>
+                        <div class="form-group">
+                            <label for="hdl">HDL Cholesterol (mg/dL) <span class="required">*</span></label>
+                            <input type="number" id="hdl" name="hdl" min="20" max="100" required placeholder="e.g., 50">
+                        </div>
+                        <div class="form-group">
+                            <label for="triglycerides">Triglycerides (mg/dL) <span class="required">*</span></label>
+                            <input type="number" id="triglycerides" name="triglycerides" min="50" max="500" required placeholder="e.g., 150">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Symptoms -->
+                <div class="form-section">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="section-icon">
+                            <rect x="4" y="3" width="16" height="18" rx="2" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 8H16M8 12H16M8 16H12" stroke="#2196F3" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Symptoms (Check all that apply)
+                    </h3>
+                    <div class="symptoms-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="fatigue">
+                            <span>Fatigue</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="frequent_urination">
+                            <span>Frequent Urination</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="increased_thirst">
+                            <span>Increased Thirst</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="blurred_vision">
+                            <span>Blurred Vision</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="headache">
+                            <span>Headache</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="chest_pain">
+                            <span>Chest Pain</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="shortness_of_breath">
+                            <span>Shortness of Breath</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="dizziness">
+                            <span>Dizziness</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H7L10 5L14 19L17 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Analyze Health Risk
+                </button>
+            </form>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Sagnik & Sarmin</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
