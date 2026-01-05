@@ -30,22 +30,22 @@ VitalPath currently evaluates risk for:
 ```
 VitalPath/
 │
-├── index.html                # Patient data input interface
-├── results.html              # Diagnostic results dashboard
+├── index.html                    # Patient data input interface
+├── results.html                  # Diagnostic results dashboard
 │
 ├── /assets/
 │   ├── /css/
-│   │   └── style.css         # Global styling
+│   │   └── style.css             # Global styling
 │   │
 │   ├── /js/
-│   │   ├── app.js            # Form handling & navigation
-│   │   ├── engine.js         # Clinical reasoning engine
-│   │   ├── rules.js          # Disease rules & thresholds
-│   │   ├── knowledge.js      # Diagnostic tests & care pathways
-│   │   └── results-display   # Results page rendering & UI logic
+│   │   ├── app.js                # Form handling & navigation
+│   │   ├── engine.js             # Clinical reasoning engine
+│   │   ├── rules.js              # Disease rules & thresholds
+│   │   ├── knowledge.js          # Diagnostic tests & care pathways
+│   │   └── results-display.js    # Results page rendering & UI logic
 │   │
 │   └── /icons/
-│       └── vital.svg         # Application logo
+│       └── vital.svg             # Application logo
 │
 ├── /docs/
 │   └── clinical-assumptions.md
