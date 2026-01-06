@@ -8,7 +8,7 @@ VitalPath is a clinical decision support system designed to assist healthcare pr
 
 **Important**: VitalPath is a supportive clinical tool and does not replace professional medical judgment.
 
-🔗 **Deployment Link** - dsagnik.github.io/VitalPath
+🔗 **Deployment Link** - https://dsagnik.github.io/VitalPath
 
 ## 🎯 Features
 
